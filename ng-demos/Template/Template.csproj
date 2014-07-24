@@ -227,6 +227,7 @@
   <ItemGroup>
     <Folder Include="app\directives\" />
     <Folder Include="app\layout\" />
+    <Folder Include="app\models\" />
     <Folder Include="app\services\" />
     <Folder Include="Content\images\" />
     <Folder Include="Models\" />
