@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50FAB625-FCC8-418D-9653-90141794F050}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ng_vstemplate</RootNamespace>
+    <AssemblyName>ng-vstemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\components\contact\contact.html" />
+    <Content Include="app\components\contact\contact.js" />
+    <Content Include="app\components\home\home.html" />
+    <Content Include="app\components\home\home.js" />
+    <Content Include="Content\app.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\kendo\BlueOpal\editor.png" />
+    <Content Include="Content\kendo\BlueOpal\imagebrowser.png" />
+    <Content Include="Content\kendo\BlueOpal\indeterminate.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading-image.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading_2x.gif" />
+    <Content Include="Content\kendo\BlueOpal\slider-h.gif" />
+    <Content Include="Content\kendo\BlueOpal\slider-v.gif" />
+    <Content Include="Content\kendo\BlueOpal\sprite.png" />
+    <Content Include="Content\kendo\BlueOpal\sprite_2x.png" />
+    <Content Include="Content\kendo\kendo.blueopal.css" />
+    <Content Include="Content\kendo\kendo.common.css" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\angular\angular-route.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\kendo\kendo.angular.js" />
+    <Content Include="Scripts\kendo\kendo.autocomplete.js" />
+    <Content Include="Scripts\kendo\kendo.binder.js" />
+    <Content Include="Scripts\kendo\kendo.button.js" />
+    <Content Include="Scripts\kendo\kendo.calendar.js" />
+    <Content Include="Scripts\kendo\kendo.colorpicker.js" />
+    <Content Include="Scripts\kendo\kendo.combobox.js" />
+    <Content Include="Scripts\kendo\kendo.core.js" />
+    <Content Include="Scripts\kendo\kendo.data.js" />
+    <Content Include="Scripts\kendo\kendo.data.odata.js" />
+    <Content Include="Scripts\kendo\kendo.data.signalr.js" />
+    <Content Include="Scripts\kendo\kendo.data.xml.js" />
+    <Content Include="Scripts\kendo\kendo.datepicker.js" />
+    <Content Include="Scripts\kendo\kendo.datetimepicker.js" />
+    <Content Include="Scripts\kendo\kendo.draganddrop.js" />
+    <Content Include="Scripts\kendo\kendo.dropdownlist.js" />
+    <Content Include="Scripts\kendo\kendo.editable.js" />
+    <Content Include="Scripts\kendo\kendo.fx.js" />
+    <Content Include="Scripts\kendo\kendo.list.js" />
+    <Content Include="Scripts\kendo\kendo.listview.js" />
+    <Content Include="Scripts\kendo\kendo.maskedtextbox.js" />
+    <Content Include="Scripts\kendo\kendo.menu.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.actionsheet.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.application.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.button.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.buttongroup.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.drawer.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.listview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.loader.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.modalview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.navbar.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.pane.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.popover.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.scroller.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.scrollview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.shim.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.splitview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.switch.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.tabstrip.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.view.js" />
+    <Content Include="Scripts\kendo\kendo.multiselect.js" />
+    <Content Include="Scripts\kendo\kendo.notification.js" />
+    <Content Include="Scripts\kendo\kendo.numerictextbox.js" />
+    <Content Include="Scripts\kendo\kendo.pager.js" />
+    <Content Include="Scripts\kendo\kendo.panelbar.js" />
+    <Content Include="Scripts\kendo\kendo.popup.js" />
+    <Content Include="Scripts\kendo\kendo.progressbar.js" />
+    <Content Include="Scripts\kendo\kendo.resizable.js" />
+    <Content Include="Scripts\kendo\kendo.router.js" />
+    <Content Include="Scripts\kendo\kendo.selectable.js" />
+    <Content Include="Scripts\kendo\kendo.slider.js" />
+    <Content Include="Scripts\kendo\kendo.sortable.js" />
+    <Content Include="Scripts\kendo\kendo.splitter.js" />
+    <Content Include="Scripts\kendo\kendo.tabstrip.js" />
+    <Content Include="Scripts\kendo\kendo.timepicker.js" />
+    <Content Include="Scripts\kendo\kendo.toolbar.js" />
+    <Content Include="Scripts\kendo\kendo.tooltip.js" />
+    <Content Include="Scripts\kendo\kendo.touch.js" />
+    <Content Include="Scripts\kendo\kendo.ui.core.js" />
+    <Content Include="Scripts\kendo\kendo.userevents.js" />
+    <Content Include="Scripts\kendo\kendo.validator.js" />
+    <Content Include="Scripts\kendo\kendo.view.js" />
+    <Content Include="Scripts\kendo\kendo.window.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\directives\" />
+    <Folder Include="app\layout\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\services\" />
+    <Folder Include="Content\images\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49415</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49415/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

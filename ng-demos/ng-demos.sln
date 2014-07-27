@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{F99B2948-C91C-4674-9C2E-429DF0AFE25B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-models", "ng-models\ng-models.csproj", "{C25D11EC-309C-4586-989E-3B2816D4E822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-vstemplate", "ng-vstemplate\ng-vstemplate.csproj", "{50FAB625-FCC8-418D-9653-90141794F050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F99B2948-C91C-4674-9C2E-429DF0AFE25B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F99B2948-C91C-4674-9C2E-429DF0AFE25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F99B2948-C91C-4674-9C2E-429DF0AFE25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F99B2948-C91C-4674-9C2E-429DF0AFE25B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C25D11EC-309C-4586-989E-3B2816D4E822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25D11EC-309C-4586-989E-3B2816D4E822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25D11EC-309C-4586-989E-3B2816D4E822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25D11EC-309C-4586-989E-3B2816D4E822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FAB625-FCC8-418D-9653-90141794F050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FAB625-FCC8-418D-9653-90141794F050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FAB625-FCC8-418D-9653-90141794F050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FAB625-FCC8-418D-9653-90141794F050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

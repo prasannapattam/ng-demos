@@ -1,0 +1,19 @@
+﻿<html data-ng-app="ngVSTemplateApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular Kendo Bootstrap Application</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <br /><br /><br /><br />
+    <a href="/home">Home</a> | <a href="/contact">Contact</a>
+    <br /><br /><br /><br />
+    <div ng-view>
+        <div id="splash" class="splash">
+            Loading ...
+        </div>
+    </div>
+    @Scripts.Render("~/scripts/libraries")
+    @Scripts.Render("~/scripts/app")
+</body>
+</html>
