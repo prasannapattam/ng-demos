@@ -15,6 +15,7 @@ namespace ng_models
                 new ScriptBundle("~/scripts/libraries")
                     .Include("~/scripts/angular/angular.js")
                     .Include("~/scripts/angular/angular-route.js")
+                    .Include("~/scripts/angular/angular-resource.js")
                     .Include("~/scripts/bootstrap.js")
                     .Include("~/scripts/jquery.js")
                     .Include("~/scripts/kendo/kendo.ui.core.js")
@@ -35,10 +36,7 @@ namespace ng_models
             bundles.Add(
                 new ScriptBundle("~/scripts/app")
                     .Include("~/app/app.js")
-                    .IncludeDirectory("~/app/services", "*.js")
-                    .IncludeDirectory("~/app/directives", "*.js")
-                    .IncludeDirectory("~/app/layout", "*.js")
-                    .IncludeDirectory("~/app/components", "*.js", true)
+                    .IncludeDirectory("~/app", "*.js", true)
                 );
         }
     }
