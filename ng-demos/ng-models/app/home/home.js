@@ -1,12 +1,21 @@
 ﻿'use strict';
 angular.module('ngmodels').controller('home', home)
-home.$inject = [];
+home.$inject = ['homeService'];
 
-function home() {
+function home(homeService) {
 
-    var vm = {};
+    var vm = {
+        model: {},
+    };
+
+    initialize();
 
     return vm;
+
+    function initialize() {
+
+    }
+
 }
 
 

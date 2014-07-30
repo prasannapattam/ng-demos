@@ -115,6 +115,7 @@
     <Content Include="app\home\home.html" />
     <Content Include="app\home\home.js" />
     <Content Include="app\contact\contactModel.js" />
+    <Content Include="app\home\homeService.js" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
