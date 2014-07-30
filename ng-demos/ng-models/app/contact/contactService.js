@@ -2,7 +2,7 @@
 
 angular.module('ngmodels').factory('contactService', contactService);
 
-contactService.$inject = ['ngResource'];
+contactService.$inject = ['$resource'];
 
 function contactService($resource) {
     return $resource(

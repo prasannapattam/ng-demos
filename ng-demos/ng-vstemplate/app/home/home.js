@@ -1,5 +1,5 @@
 ﻿'use strict';
-angular.module('ngmodels').controller('home', home)
+angular.module('ngVSTemplateApp').controller('home', home)
 home.$inject = [];
 
 function home() {
@@ -8,5 +8,3 @@ function home() {
 
     return vm;
 }
-
-

@@ -1,25 +1,26 @@
 ﻿'use strict';
 
 angular.module('ngmodels').controller('contact', contact);
-
 contact.$inject = ['contactService'];
 
 function contact(contactService) {
+
     var vm = {
         model: {},
         save: save
     };
 
+    initialize();
 
     return vm;
-    initialize();
 
     function initialize() {
         vm.model = contactService.get();
     }
 
     function save() {
-        alert('sayHi');
+        contactService.save(vm.model);
+        alert('Saved');
     }
 
 }

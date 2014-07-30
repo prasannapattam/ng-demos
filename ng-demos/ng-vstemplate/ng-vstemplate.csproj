@@ -106,11 +106,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.config.js" />
     <Content Include="app\app.js" />
-    <Content Include="app\components\contact\contact.html" />
-    <Content Include="app\components\contact\contact.js" />
-    <Content Include="app\components\home\home.html" />
-    <Content Include="app\components\home\home.js" />
+    <Content Include="app\contact\contact.html" />
+    <Content Include="app\contact\contact.js" />
+    <Content Include="app\home\home.html" />
+    <Content Include="app\home\home.js" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -219,10 +220,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
+    <Folder Include="app\components\" />
     <Folder Include="app\layout\" />
-    <Folder Include="app\models\" />
-    <Folder Include="app\services\" />
     <Folder Include="Content\images\" />
     <Folder Include="Models\" />
   </ItemGroup>

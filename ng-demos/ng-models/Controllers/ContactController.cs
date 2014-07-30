@@ -19,5 +19,10 @@ namespace ng_models.Controllers
                 LastName = "Pattam"
             };
         }
+
+        public bool Post(ContactModel contact)
+        {
+            return true;
+        }
     }
 }

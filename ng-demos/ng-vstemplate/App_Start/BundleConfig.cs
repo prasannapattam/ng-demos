@@ -35,10 +35,7 @@ namespace ng_vstemplate
             bundles.Add(
                 new ScriptBundle("~/scripts/app")
                     .Include("~/app/app.js")
-                    .IncludeDirectory("~/app/services", "*.js")
-                    .IncludeDirectory("~/app/directives", "*.js")
-                    .IncludeDirectory("~/app/layout", "*.js")
-                    .IncludeDirectory("~/app/components", "*.js", true)
+                    .IncludeDirectory("~/app", "*.js", true)
                 );
         }
     }
