@@ -1,6 +1,6 @@
 ﻿'use strict'
 
-angular.module('ngmodels').factory('contactService', contactService);
+angular.module('appmodels').factory('contactService', contactService);
 
 contactService.$inject = ['$resource'];
 

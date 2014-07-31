@@ -1,4 +1,4 @@
 ﻿'use strict';
 
-angular.module('ngmodels', ['ngRoute', 'ngResource']);
+angular.module('appmodels', ['ngRoute', 'ngResource']);
 

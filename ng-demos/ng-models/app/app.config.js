@@ -1,4 +1,4 @@
-﻿angular.module('ngmodels').config(routeConfig);
+﻿angular.module('appmodels').config(routeConfig);
 routeConfig.$inject = ['$routeProvider', '$locationProvider'];
 
 function routeConfig($routeProvider, $locationProvider) {

@@ -1,6 +1,6 @@
 ﻿'use strict'
 
-angular.module('ngmodels').factory('homeService', homeService);
+angular.module('appmodels').factory('homeService', homeService);
 
 homeService.$inject = ['$resource'];
 

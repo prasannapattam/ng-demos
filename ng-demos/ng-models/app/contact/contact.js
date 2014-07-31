@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-angular.module('ngmodels').controller('contact', contact);
+angular.module('appmodels').controller('contact', contact);
 contact.$inject = ['contactService'];
 
 function contact(contactService) {

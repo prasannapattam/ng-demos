@@ -1,6 +1,6 @@
 ﻿'use strict'
 
-angular.module('ngmodels').value("contactModel", contactModel());
+angular.module('appmodels').value("contactModel", contactModel());
 
 function contactModel() {
     return {
