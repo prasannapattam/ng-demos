@@ -1,4 +1,6 @@
-﻿angular.module('ngVSTemplateApp').config(routeConfig);
+﻿'use strict';
+
+angular.module('ngVSTemplateApp').config(routeConfig);
 routeConfig.$inject = ['$routeProvider', '$locationProvider'];
 
 function routeConfig($routeProvider, $locationProvider) {

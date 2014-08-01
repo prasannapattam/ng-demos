@@ -131,7 +131,6 @@
     <Content Include="Content\kendo\BlueOpal\sprite_2x.png" />
     <Content Include="Content\kendo\kendo.blueopal.css" />
     <Content Include="Content\kendo\kendo.common.css" />
-    <Content Include="Content\normalize.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular\angular-resource.js" />
     <Content Include="Scripts\angular\angular-route.js" />

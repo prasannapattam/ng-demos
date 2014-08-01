@@ -1,4 +1,6 @@
-﻿angular.module('appmodels').config(routeConfig);
+﻿'use strict';
+
+angular.module('appmodels').config(routeConfig);
 routeConfig.$inject = ['$routeProvider', '$locationProvider'];
 
 function routeConfig($routeProvider, $locationProvider) {

@@ -23,7 +23,6 @@ namespace ng_vstemplate
             //including all the css used in our app
             bundles.Add(
                 new StyleBundle("~/content/css")
-                    .Include("~/content/normalize.css")
                     .Include("~/content/bootstrap/bootstrap.css")
                     .Include("~/content/bootstrap/bootstrap-theme.css")
                     .Include("~/content/kendo/kendo.common.css")

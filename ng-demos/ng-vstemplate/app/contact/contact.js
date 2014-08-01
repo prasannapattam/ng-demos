@@ -4,9 +4,19 @@ contact.$inject = [];
 
 function contact() {
 
-    var vm = {};
+    var vm = {
+        model: {},
+    };
+
+    initialize();
 
     return vm;
+
+    function initialize() {
+
+    }
+
+
 }
 
 

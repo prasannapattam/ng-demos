@@ -4,7 +4,17 @@ home.$inject = [];
 
 function home() {
 
-    var vm = {};
+    var vm = {
+        model: {},
+    };
+
+    initialize();
 
     return vm;
+
+    function initialize() {
+
+    }
+
+
 }
