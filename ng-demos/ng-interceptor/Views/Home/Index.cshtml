@@ -1,0 +1,17 @@
+﻿<html ng-app="appinterceptors">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Models in Angular</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <a href="/home">Home</a> <a href="/contact">Contact</a>
+    <div ng-view>
+        <div id="splash" class="splash">
+            Loading ...
+        </div>
+    </div>
+    @Scripts.Render("~/scripts/libraries")
+    @Scripts.Render("~/scripts/app")
+</body>
+</html>
