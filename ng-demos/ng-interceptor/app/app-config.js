@@ -1,12 +1,11 @@
 ﻿'use strict';
 
 angular.module('appinterceptors').config(appConfig);
-routeConfig.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
+appConfig.$inject = ['$routeProvider', '$locationProvider', '$provide', '$httpProvider'];
 
 function appConfig($routeProvider, $locationProvider, $provide, $httpProvider) {
 
-    //routing
-    $routeProvider
+  $routeProvider
       .when("/home", {
         templateUrl: "/app/home/home.html",
         controller: "home",
@@ -18,10 +17,10 @@ function appConfig($routeProvider, $locationProvider, $provide, $httpProvider) {
         controllerAs: "vm"
       })
       .otherwise({ redirectTo: "/home" });
-    $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
 
     // Add the interceptor to the $httpProvider.
-    $httpProvider.interceptors.push('WebAPIInterceptor');
+  $httpProvider.interceptors.push('WebAPIInterceptor');
 
 }
 
