@@ -103,7 +103,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.config.js" />
+    <Content Include="app\app-config.js" />
+    <Content Include="app\app-interceptor.js" />
     <Content Include="app\app.js" />
     <Content Include="app\contact\contact.html" />
     <Content Include="app\contact\contact.js" />
