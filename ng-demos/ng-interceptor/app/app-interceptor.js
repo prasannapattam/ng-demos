@@ -12,7 +12,8 @@ function WebAPIInterceptor($q) {
 
     //request success
     function request(config) {
-        console.log(config); 
+        console.log(config);
+
 
         // Return the config or promise.
         return config || $q.when(config);
@@ -37,9 +38,8 @@ function WebAPIInterceptor($q) {
     //response Error
     function responseError(rejection) {
         console.log(rejection); // Contains the data about the error.
-
         // Return the promise rejection.
-        return $q.reject(rejection);
+        return "How are you";
     }
 }
 

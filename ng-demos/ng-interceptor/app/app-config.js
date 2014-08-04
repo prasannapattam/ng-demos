@@ -17,10 +17,10 @@ function appConfig($routeProvider, $locationProvider, $provide, $httpProvider) {
         controllerAs: "vm"
       })
       .otherwise({ redirectTo: "/home" });
-  $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
     // Add the interceptor to the $httpProvider.
-  $httpProvider.interceptors.push('WebAPIInterceptor');
+    $httpProvider.interceptors.push('WebAPIInterceptor');
 
 }
 

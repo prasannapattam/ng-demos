@@ -10,14 +10,19 @@ namespace ng_interceptor.Controllers
 {
     public class ContactController : ApiController
     {
-        public ContactModel Get()
+        public AjaxModel<ContactModel> Get()
         {
-            return new ContactModel()
+
+            throw new ApplicationException("Exception");
+
+            ContactModel model = new ContactModel()
             {
                 ContactID = 26,
                 FirstName = "Prakul",
                 LastName = "Pattam"
             };
+
+            return new AjaxModel<ContactModel>() { Success = true, Message = "", Model = model };
         }
 
         public bool Post(ContactModel contact)

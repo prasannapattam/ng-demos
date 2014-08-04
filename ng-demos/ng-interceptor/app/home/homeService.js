@@ -6,7 +6,7 @@ homeService.$inject = ['$resource'];
 
 function homeService($resource) {
     return $resource(
-        "/api"
+        "/api/Contact"
     );
 }
 
