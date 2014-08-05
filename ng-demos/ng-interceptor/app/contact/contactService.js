@@ -2,34 +2,28 @@
 
 angular.module('appinterceptors').factory('contactService', contactService);
 
-contactService.$inject = ['$resource'];
+contactService.$inject = ['$http'];
 
-function contactService($resource) {
-    return $resource(
-        "/api/contact"
-    );
-}
+function contactService($http) {
+    var model = {};
 
-/*
-   model.getDoohkyById = function( id )
-    {
-       if( this.data ) {
-            var deferred = $q.defer();
-            if( this.data.length > 0) {
-                for( var i =0; i < this.data.length; i++)
-                {
-                    if( this.data[i].id === id )
-                    {
-                        //this returns a value
-                        deferred.resolve(this.data[i]);
-                        break ;
-                    }
-                }
-            }
-            return deferred.promise;
-        }
+    var service = {
+        model: model,
+        fetch: fetch,
+        save: save
+    };
 
-        // this returns a promise
-        return this.service.getBy('id',id);
+    return service;
+
+    function fetch() {
+        return $http.get("/api/contact")
+            .success(function (data) {
+                angular.extend(model, data);
+            });
     }
-*/
+
+    function save() {
+
+    }
+
+}

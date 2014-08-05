@@ -15,12 +15,13 @@ function contact(contactService) {
     return vm;
 
     function initialize() {
-        try{
-            vm.model = contactService.get();
-        }
-        catch (exp) {
-            console.log(exp);
-        }
+        contactService.fetch().success(function (data) {
+            console.log(data);
+        })
+        .error(function (data, status, headers, config) {
+            console.log(data);
+        });
+        vm.model = contactService.model;
     }
 
     function save() {

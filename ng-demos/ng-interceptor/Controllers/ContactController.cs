@@ -13,8 +13,6 @@ namespace ng_interceptor.Controllers
         public AjaxModel<ContactModel> Get()
         {
 
-            throw new ApplicationException("Exception");
-
             ContactModel model = new ContactModel()
             {
                 ContactID = 26,
@@ -22,7 +20,7 @@ namespace ng_interceptor.Controllers
                 LastName = "Pattam"
             };
 
-            return new AjaxModel<ContactModel>() { Success = true, Message = "", Model = model };
+            return new AjaxModel<ContactModel>() { Success = true, Message = "Testing the message", Model = model };
         }
 
         public bool Post(ContactModel contact)

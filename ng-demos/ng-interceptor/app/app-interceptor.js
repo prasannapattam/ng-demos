@@ -12,8 +12,6 @@ function WebAPIInterceptor($q) {
 
     //request success
     function request(config) {
-        console.log(config);
-
 
         // Return the config or promise.
         return config || $q.when(config);
@@ -21,7 +19,6 @@ function WebAPIInterceptor($q) {
 
     //request error
     function requestError(rejection) {
-        console.log(rejection); 
 
         // Return the promise rejection.
         return $q.reject(rejection);
@@ -29,7 +26,16 @@ function WebAPIInterceptor($q) {
 
     // response success
     function response(response) {
-        console.log(response);
+
+        //checking whether we got our AjaxModel
+        if (response.data.hasOwnProperty("Success") && response.data.hasOwnProperty("Message") && response.data.hasOwnProperty("Model")) {
+            if (response.data.Success === false) {
+                return $q.reject(response);
+            }
+            else {
+                response.data = response.data.Model;
+            }
+        }
 
         // Return the response or promise.
         return response || $q.when(response);
@@ -37,9 +43,8 @@ function WebAPIInterceptor($q) {
 
     //response Error
     function responseError(rejection) {
-        console.log(rejection); // Contains the data about the error.
         // Return the promise rejection.
-        return "How are you";
+        return $q.reject(rejection);
     }
 }
 
