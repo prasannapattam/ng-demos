@@ -23,7 +23,10 @@ function contactService($http) {
     }
 
     function save() {
-
+        return $http.post("/api/contact", model)
+            .success(function (data) {
+                
+            });
     }
 
 }

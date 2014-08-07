@@ -7,26 +7,28 @@ function contact(contactService) {
 
     var vm = {
         model: {},
+        init: init,
         save: save
     };
 
-    initialize();
+    init();
 
     return vm;
 
-    function initialize() {
-        contactService.fetch().success(function (data) {
+    function init() {
+        return contactService.fetch().success(function (data) {
             console.log(data);
+            vm.model = contactService.model;
         })
         .error(function (data, status, headers, config) {
             console.log(data);
         });
-        vm.model = contactService.model;
     }
 
     function save() {
-        contactService.save(vm.model);
-        alert('Saved');
+        contactService.save().success(function () {
+            alert('Saved');
+        });
     }
 }
 

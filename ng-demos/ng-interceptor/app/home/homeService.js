@@ -2,11 +2,25 @@
 
 angular.module('appinterceptors').factory('homeService', homeService);
 
-homeService.$inject = ['$resource'];
+homeService.$inject = ['$http'];
 
-function homeService($resource) {
-    return $resource(
-        "/api/Contact"
-    );
+function homeService($http) {
+    var model = {};
+
+    var service = {
+        model: model,
+        fetch: fetch,
+        save: save
+    };
+
+    return service;
+
+    function fetch() {
+
+    }
+
+    function save() {
+
+    }
+
 }
-

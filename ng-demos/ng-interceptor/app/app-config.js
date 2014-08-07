@@ -9,12 +9,15 @@ function appConfig($routeProvider, $locationProvider, $provide, $httpProvider) {
       .when("/home", {
         templateUrl: "/app/home/home.html",
         controller: "home",
-        controllerAs: "vm"
+        controllerAs: "vm",
       })
       .when("/contact", {
         templateUrl: "/app/contact/contact.html",
         controller: "contact",
-        controllerAs: "vm"
+        controllerAs: "vm",
+          resolve: {
+              service: 'contactService',
+            }
       })
       .otherwise({ redirectTo: "/home" });
     $locationProvider.html5Mode(true);

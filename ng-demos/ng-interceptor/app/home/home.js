@@ -8,11 +8,11 @@ function home(homeService) {
         model: {},
     };
 
-    initialize();
+    init();
 
     return vm;
 
-    function initialize() {
+    function init() {
 
     }
 
