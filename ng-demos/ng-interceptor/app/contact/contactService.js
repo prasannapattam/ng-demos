@@ -18,7 +18,7 @@ function contactService($http) {
     function resolve() {
         return $http.get("/api/contact")
             .success(function (data) {
-                angular.extend(model, data);
+                service.model = data;
             });
     }
 
