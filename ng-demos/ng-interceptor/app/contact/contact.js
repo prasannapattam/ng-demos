@@ -16,13 +16,7 @@ function contact(contactService) {
     return vm;
 
     function init() {
-        return contactService.fetch().success(function (data) {
-            console.log(data);
-            vm.model = contactService.model;
-        })
-        .error(function (data, status, headers, config) {
-            console.log(data);
-        });
+        vm.model = contactService.model;
     }
 
     function save() {
