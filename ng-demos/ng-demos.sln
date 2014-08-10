@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-vstemplate", "ng-vstempl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-interceptor", "ng-interceptor\ng-interceptor.csproj", "{0D466461-7554-4589-AF01-5D65E3D60A64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-styleguide", "ng-styleguide\ng-styleguide.csproj", "{AA163DE1-4500-44A5-8280-93F5D3D874EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0D466461-7554-4589-AF01-5D65E3D60A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D466461-7554-4589-AF01-5D65E3D60A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D466461-7554-4589-AF01-5D65E3D60A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
