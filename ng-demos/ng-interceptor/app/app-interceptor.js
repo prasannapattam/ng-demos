@@ -1,4 +1,5 @@
-﻿angular.module('appinterceptors').factory('WebAPIInterceptor', WebAPIInterceptor);
+﻿'use strict';
+angular.module('appinterceptors').factory('WebAPIInterceptor', WebAPIInterceptor);
 WebAPIInterceptor.$inject = ['$q'];
 
 function WebAPIInterceptor($q) {
@@ -26,10 +27,11 @@ function WebAPIInterceptor($q) {
 
     // response success
     function response(response) {
-
         //checking whether we got our AjaxModel
         if (response.data.hasOwnProperty("Success") && response.data.hasOwnProperty("Message") && response.data.hasOwnProperty("Model")) {
             if (response.data.Success === false) {
+                //as needed show error message to the user
+                //reject the response
                 return $q.reject(response);
             }
             else {

@@ -19,7 +19,10 @@ function contactService($http) {
         return $http.get("/api/contact")
             .success(function (data) {
                 service.model = data;
-            });
+            })
+        .error(function (data) {
+            //process error if needed
+        });
     }
 
     function save() {
