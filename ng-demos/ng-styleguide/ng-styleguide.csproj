@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
@@ -49,6 +53,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -56,6 +63,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -93,20 +103,123 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app-config.js" />
+    <Content Include="app\app-interceptor.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\contact\contact.html" />
+    <Content Include="app\contact\contact.js" />
+    <Content Include="app\contact\contactModel.js" />
+    <Content Include="app\contact\contactService.js" />
+    <Content Include="app\home\home.html" />
+    <Content Include="app\home\home.js" />
+    <Content Include="app\home\homeService.js" />
+    <Content Include="Content\app.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\kendo\BlueOpal\editor.png" />
+    <Content Include="Content\kendo\BlueOpal\imagebrowser.png" />
+    <Content Include="Content\kendo\BlueOpal\indeterminate.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading-image.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading.gif" />
+    <Content Include="Content\kendo\BlueOpal\loading_2x.gif" />
+    <Content Include="Content\kendo\BlueOpal\slider-h.gif" />
+    <Content Include="Content\kendo\BlueOpal\slider-v.gif" />
+    <Content Include="Content\kendo\BlueOpal\sprite.png" />
+    <Content Include="Content\kendo\BlueOpal\sprite_2x.png" />
+    <Content Include="Content\kendo\kendo.blueopal.css" />
+    <Content Include="Content\kendo\kendo.common.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular\angular-resource.js" />
+    <Content Include="Scripts\angular\angular-route.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\kendo\kendo.angular.js" />
+    <Content Include="Scripts\kendo\kendo.autocomplete.js" />
+    <Content Include="Scripts\kendo\kendo.binder.js" />
+    <Content Include="Scripts\kendo\kendo.button.js" />
+    <Content Include="Scripts\kendo\kendo.calendar.js" />
+    <Content Include="Scripts\kendo\kendo.colorpicker.js" />
+    <Content Include="Scripts\kendo\kendo.combobox.js" />
+    <Content Include="Scripts\kendo\kendo.core.js" />
+    <Content Include="Scripts\kendo\kendo.data.js" />
+    <Content Include="Scripts\kendo\kendo.data.odata.js" />
+    <Content Include="Scripts\kendo\kendo.data.signalr.js" />
+    <Content Include="Scripts\kendo\kendo.data.xml.js" />
+    <Content Include="Scripts\kendo\kendo.datepicker.js" />
+    <Content Include="Scripts\kendo\kendo.datetimepicker.js" />
+    <Content Include="Scripts\kendo\kendo.draganddrop.js" />
+    <Content Include="Scripts\kendo\kendo.dropdownlist.js" />
+    <Content Include="Scripts\kendo\kendo.editable.js" />
+    <Content Include="Scripts\kendo\kendo.fx.js" />
+    <Content Include="Scripts\kendo\kendo.list.js" />
+    <Content Include="Scripts\kendo\kendo.listview.js" />
+    <Content Include="Scripts\kendo\kendo.maskedtextbox.js" />
+    <Content Include="Scripts\kendo\kendo.menu.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.actionsheet.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.application.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.button.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.buttongroup.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.drawer.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.listview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.loader.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.modalview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.navbar.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.pane.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.popover.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.scroller.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.scrollview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.shim.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.splitview.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.switch.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.tabstrip.js" />
+    <Content Include="Scripts\kendo\kendo.mobile.view.js" />
+    <Content Include="Scripts\kendo\kendo.multiselect.js" />
+    <Content Include="Scripts\kendo\kendo.notification.js" />
+    <Content Include="Scripts\kendo\kendo.numerictextbox.js" />
+    <Content Include="Scripts\kendo\kendo.pager.js" />
+    <Content Include="Scripts\kendo\kendo.panelbar.js" />
+    <Content Include="Scripts\kendo\kendo.popup.js" />
+    <Content Include="Scripts\kendo\kendo.progressbar.js" />
+    <Content Include="Scripts\kendo\kendo.resizable.js" />
+    <Content Include="Scripts\kendo\kendo.router.js" />
+    <Content Include="Scripts\kendo\kendo.selectable.js" />
+    <Content Include="Scripts\kendo\kendo.slider.js" />
+    <Content Include="Scripts\kendo\kendo.sortable.js" />
+    <Content Include="Scripts\kendo\kendo.splitter.js" />
+    <Content Include="Scripts\kendo\kendo.tabstrip.js" />
+    <Content Include="Scripts\kendo\kendo.timepicker.js" />
+    <Content Include="Scripts\kendo\kendo.toolbar.js" />
+    <Content Include="Scripts\kendo\kendo.tooltip.js" />
+    <Content Include="Scripts\kendo\kendo.touch.js" />
+    <Content Include="Scripts\kendo\kendo.ui.core.js" />
+    <Content Include="Scripts\kendo\kendo.userevents.js" />
+    <Content Include="Scripts\kendo\kendo.validator.js" />
+    <Content Include="Scripts\kendo\kendo.view.js" />
+    <Content Include="Scripts\kendo\kendo.window.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AjaxModel.cs" />
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,9 +228,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\layout\" />
+    <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
