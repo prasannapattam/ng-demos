@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-models", "ng-models\ng-models.csproj", "{C25D11EC-309C-4586-989E-3B2816D4E822}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-interceptor", "ng-interceptor\ng-interceptor.csproj", "{0D466461-7554-4589-AF01-5D65E3D60A64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-styleguide", "ng-styleguide\ng-styleguide.csproj", "{AA163DE1-4500-44A5-8280-93F5D3D874EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-security", "ng-security\ng-security.csproj", "{95A630FA-D126-4E51-84DC-59335305C9BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA163DE1-4500-44A5-8280-93F5D3D874EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A630FA-D126-4E51-84DC-59335305C9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A630FA-D126-4E51-84DC-59335305C9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A630FA-D126-4E51-84DC-59335305C9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A630FA-D126-4E51-84DC-59335305C9BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

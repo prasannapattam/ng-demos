@@ -1,0 +1,71 @@
+﻿@using System.Web.Optimization
+<html ng-app="bcd">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" target="_blank">
+    <title></title>
+    @Styles.Render("~/Content/css")
+</head>
+<body class="main" md-theme="grey">
+    <div class="container" layout="column" ng-controller="index as vm">
+        <header ng-hide="session.navigation.hideHeader">
+            <div layout="row" class="top-header" ng-cloak>
+                <div>
+                    <a href="/"><img class="top-header" src="~/content/images/logo.jpg" /></a>
+                </div>
+
+                <div flex layout="column" layout-align="end">
+                    <div class="app-header">@ViewBag.AppTitle</div>
+                    <div layout="row" ng-show="vm.profile.isAuthenticated">
+                        <div flex>
+                            <ul class="tabrow">
+                                <li ng-repeat="tab in vm.navigation.tabs" ng-class="{selected: tab.active }">
+                                    <a href="#" ng-click="vm.navigation.activateTab(tab)">{{tab.title}}</a>
+                                    <a href="#" class="tab-close" ng-class="{hidden: tab.firstTab}" ng-click="vm.navigation.removeTab(tab)">x</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div flex="30" class="search-patient">
+                            <input placeholder="'Search Company'" kendo-auto-complete ng-model=" vm.searchCriteria" k-options="vm.searchOptions"
+                                   k-on-select="vm.searchSelect(kendoEvent)"
+                                   k-template="'${ data.PatientName }<hr class=&quot;tight&quot; />'"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div layout="column">
+                    <img class="loading" src="~/content/images/loading.gif" ng-style="{'visibility' : session.navigation.isLoading ? 'visible' : 'hidden'}" />
+                    <ul id="main-menu" class="menu" kendo-menu k-data-source="vm.menuItems" k-on-select="vm.menuSelect(kendoEvent)" ng-show="vm.profile.isAuthenticated"></ul>
+                </div>
+                <div ng-show="vm.profile.isAuthenticated">
+                    <img class="top-header" ng-src="{{profile.photoUrl}}" />
+                </div>
+            </div>
+        </header>
+        <div flex layout="row">
+            <main flex class="main-content">
+                <div ui-view class="row content">
+                    <div id="splash" class="splash" ng-hide="session.navigation.hideHeader" ng-cloak>
+                        <br /><br />
+                        <h2 class="splash-header">Welcome to @ViewBag.AppTitle</h2>
+                        <br />
+                        <img class="splash-loading" src="~/content/images/loading.gif" />
+                    </div>
+                </div>
+            </main>
+
+        </div>
+
+        @*<footer>
+                Footer
+            </footer>*@
+    </div>
+    <script>
+        window.virtualDirectory = '@ViewBag.VirtualDirectory';
+        window.userAuthenticated = @ViewBag.UserAuthenticated;
+    </script>
+    @Scripts.Render("~/scripts/libraries")
+    @Scripts.Render("~/scripts/app")
+</body>
+</html>
+

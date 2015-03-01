@@ -1,0 +1,78 @@
+﻿<div section-header text="Today's Patients" css-class="main-header"></div>
+
+<div layout="row">
+    <div>
+        <md-content class="user-list" ng-style="{'height' : vm.listHeight }">
+            <md-list>
+                <md-item ng-repeat="item in vm.model" class="user-list-item" ng-click="vm.selectUser(item)" ng-class="{'user-list-item-selected': item.selected }">
+                    <md-item-content class="md-item-content">
+                        <div class="md-tile-left">
+                            <img class="top-header" ng-src="{{item.FullPhotoUrl}}" class="face" class="face" alt="{{item.FullName}}">
+                        </div>
+                        <div class="md-tile-content">
+                            <h3>{{item.FullName}}</h3>
+                            <h4>({{item.UserName}})</h4>
+                        </div>
+                    </md-item-content>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-item>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex>
+        <div class="pos-box" ng-show="vm.showDetail">
+            <form editable-form name="userForm" onbeforesave="vm.saveUser($data)" onaftersave="vm.hidePasswords()">
+                <div class="ui-grid">
+                    <div layout="row" class="ui-grid-header ui-grid-top-panel ui-grid-cell-contents">
+                        <span flex>{{vm.selectedUser.FullName}}</span>
+                        <md-button type="button" class="md-raised" ng-click="userForm.$show()" ng-show="!userForm.$visible">
+                            Edit
+                        </md-button>
+                        <!-- buttons to submit / cancel form -->
+                        <span ng-show="userForm.$visible">
+                            <md-button type="button" class="md-raised" ng-disabled="userForm.$waiting" ng-click="vm.cancel($event)">
+                                Cancel
+                            </md-button>
+                            <md-button type="submit" class="md-primary md-raised" ng-disabled="userForm.$waiting">
+                                Save
+                            </md-button>
+                        </span>
+                    </div>
+                    <div layout="row" layout-align="start center">
+                        <div flex="30" layout="column" layout-align="space-between center">
+                            <img id="userPhoto" class="top-header" ng-src="{{vm.selectedUser.FullPhotoUrl}}" layout-padding />
+                            <input type="file" id="userPhotoInput" accept="file_extension|audio/*|video/*|image/*|media_type" ng-model="file" onchange="angular.element(this).scope().vm.changeFile(this)" ng-show="userForm.$visible" />
+                        </div>
+                        <div flex>
+                            <div layout="row">
+                                <div flex="25" class="col-row-header">Name</div>
+                                <div flex class="col-row-content">
+                                    <span editable-text="vm.selectedUser.FirstName" e-name="FirstName" e-class="medium" e-maxlength="20" onbeforesave="vm.validateRequiedField($data, 'First Name')">{{ vm.selectedUser.FullName }}</span>
+                                    <span editable-text="vm.selectedUser.LastName" e-name="LastName" e-class="medium" e-maxlength="20" onbeforesave="vm.validateRequiedField($data, 'Last Name')"></span>
+                                </div>
+                            </div>
+                            <div layout="row">
+                                <div flex="25" class="col-row-header">Username</div>
+                                <div flex class="col-row-content">
+                                    <span editable-text="vm.selectedUser.UserName" e-name="UserName" e-class="medium" e-maxlength="20" onbeforesave="vm.validateRequiedField($data, 'Username')">{{ vm.selectedUser.UserName }}</span>
+                                </div>
+                            </div>
+                            <div layout="row">
+                                <div flex="25" class="col-row-header">Password</div>
+                                <div flex class="col-row-content">
+                                    <span editable-password="vm.selectedUser.Password" e-name="Password" e-class="medium" e-maxlength="20" onbeforesave="vm.validateRequiedField($data, 'Password')">{{ vm.selectedUser.Password }}</span>
+                                </div>
+                            </div>
+                            <div layout="row">
+                                <div flex="25" class="col-row-header">Confirm Password</div>
+                                <div flex class="col-row-content">
+                                    <span editable-password="vm.selectedUser.ConfirmPassword" e-name="ConfirmPassword" e-class="medium" e-maxlength="20" onbeforesave="vm.validateRequiedField($data, 'Confirm Password')">{{ vm.selectedUser.ConfirmPassword }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

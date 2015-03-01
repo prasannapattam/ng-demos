@@ -1,0 +1,27 @@
+﻿<br />
+<form name="loginForm" class="form-horizontal" novalidate>
+
+    <div class="form-group" ng-class="{'has-error': loginForm.username.$invalid && vm.isFormSubmitted(loginForm.username) }">
+        <label for="username" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="username" ng-model="vm.model.UserName" required autofocus>
+            <div class="error-messages" ng-messages="loginForm.username.$error" ng-if="vm.isFormSubmitted(loginForm.username)">
+                <div ng-message="required">Username is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error': loginForm.userpassword.$invalid && vm.isFormSubmitted(loginForm.userpassword) }">
+        <label for="userpassword" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-3">
+            <input type="password" class="form-control" name="userpassword" ng-model="vm.model.UserPassword" required>
+            <div class="error-messages" ng-messages="loginForm.userpassword.$error" ng-if="vm.isFormSubmitted(loginForm.userpassword)">
+                <div ng-message="required">Password is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" ng-click="vm.validate(loginForm)">Sign in</button>
+        </div>
+    </div>
+</form>
