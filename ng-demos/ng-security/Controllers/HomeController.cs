@@ -10,7 +10,7 @@ namespace ng_security.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.AppTitle = "Big Company Data";
+            ViewBag.AppTitle = "ng-Security Demo";
 
             string virtualDirectory = Url.Content("~");
             if (virtualDirectory.Substring(virtualDirectory.Length - 1) == "/") //removing the last slash

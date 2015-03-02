@@ -16,7 +16,13 @@ namespace ng_security
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
-                "default",
+                "default",                                              // Route name
+                "{controller}/{action}/{id}",                           // URL with parameters
+                new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
+            ); 
+            
+            routes.MapRoute(
+                "catchall",
                 "{*url}",
                 new { controller = "Home", action = "Index" }
             );
