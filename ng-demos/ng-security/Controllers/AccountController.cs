@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
+using ng_security.Models;
 
 namespace ng_security.Controllers
 {
@@ -16,11 +17,11 @@ namespace ng_security.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string UserName, string UserPassword)
+        public ActionResult Login(LoginModel model)
         {
-            if (UserName == "prasanna" && UserPassword == "prasanna")
+            if (model.UserName == "prasanna" && model.UserPassword == "prasanna")
             {
-                FormsAuthentication.SetAuthCookie(UserName, true);
+                FormsAuthentication.SetAuthCookie(model.UserName, true);
                 return RedirectToAction("Index", "Home");
             }
             return View();
