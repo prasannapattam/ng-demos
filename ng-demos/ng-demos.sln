@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-styleguide", "ng-stylegu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-security", "ng-security\ng-security.csproj", "{95A630FA-D126-4E51-84DC-59335305C9BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng-basic", "ng-basic\ng-basic.csproj", "{7187BEBA-B977-4205-AC95-CE6FAD352B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{95A630FA-D126-4E51-84DC-59335305C9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A630FA-D126-4E51-84DC-59335305C9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A630FA-D126-4E51-84DC-59335305C9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7187BEBA-B977-4205-AC95-CE6FAD352B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7187BEBA-B977-4205-AC95-CE6FAD352B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7187BEBA-B977-4205-AC95-CE6FAD352B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7187BEBA-B977-4205-AC95-CE6FAD352B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
