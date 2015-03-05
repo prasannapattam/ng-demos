@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="simpleapp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div ng-controller="index as vm">
+        User Name: <input type="text" ng-model="vm.model.UserName" /> <br />
+        Password: <input type="text" ng-model="vm.model.Password" /> <br />
+        <button ng-click="vm.login()">Login</button>
+
+    </div>
+
+    <script src="~/Scripts/angular.js"></script>
+    <script>
+        'use strict'
+
+        var app = angular.module('simpleapp', []);
+
+        angular.module('simpleapp').controller('index', index);
+
+        function index() {
+            var vm = this;
+
+            vm.model = {
+                UserName: "",
+                Password: "",
+            }
+
+            vm.login = function () {
+                alert('hello');
+            }
+
+        }
+
+    </script>
+</body>
+</html>
